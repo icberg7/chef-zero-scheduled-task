@@ -104,7 +104,7 @@ module Kitchen
       def new_scheduled_task_command
         "schtasks /create /tn 'chef-tk' " \
         "/ru '#{task_username}' /rp '#{task_password}' " \
-        "/sc daily /st 00:00 /f "
+        "/sc daily /st 00:00 /f /rl highest "
       end
 
       def new_scheduled_task_command_line_ps
